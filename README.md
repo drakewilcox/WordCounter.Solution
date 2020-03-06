@@ -6,13 +6,16 @@
 
 ## Description
 
-_This is a template for future projects in C# to make project setup streamlined. To use this for a new project. Rename all files that contain 'Project Name' and "Class Name," and and make sure the ProjectName is changed in the 'ProjectName.Tests.csproj' file. Remove any git files by typing ``rm -rf .git`` in the terminal and re-initialize git by typing ``git init`` in the terminal. To create the 'bin' and 'obj' folders and run tests navigate to the "ProjectName.Tests" folder and type ``dotnet restore`` in your terminal. To begin testing type ``dotnet test`` in the terminal._
+_This is a Friday project for week 2 of the C# unit at Epicodus that implements using MSTest in a C# Console Program that allows the user to input a word, and a sentence, and returns a count for how many instances of the word are included in the sentence._
 
 ## Specifications:
 
 | Specification | Example Input | Example Output |
 | :-------------:|:-------------:|:-------------:|
-| When the user does this, the application will do that | "Input to test" | "Expected output to test" |
+| When the user inputs nothing, the appication returns with an error . | "" | "Please Enter a Word and a Sentence" |
+| When the user inputs a word and a sentence, the appication returns with the amount of times that word occurs | Word: "Mystery" Sentence: "Its all a Mystery" | Word Count: 1 |
+| When the sentence contains words that include the input word, the word count does not increase | Word: "hood" Sentence: "The hooded soldier fought bravely." | Word Count: 0 |
+The Application account for lower and uppercase letters | Word: "CAT" Sentence: "Damn, that's a cute cat. | Word Count: 1 |
 
 ## Setup/Installation Requirements
 
