@@ -25,5 +25,17 @@ namespace WordCounter.Tests
       string[] wordTestArray = {"its", "all", "a", "mystery"};
       CollectionAssert.AreEqual(result, wordTestArray);
     }
+    [TestMethod]
+    public void CountWords_MethodAddsToWordScore_Int()
+    {
+      Counter newCounter = new Counter("Mystery", "Its All A Mystery");
+
+      string[] wordTestArray = newCounter.SplitSentence();
+      newCounter.CountWords(wordTestArray);
+      int result = newCounter.WordScore;
+
+      Assert.AreEqual(result, 1);
+    }
+
   }
 }
