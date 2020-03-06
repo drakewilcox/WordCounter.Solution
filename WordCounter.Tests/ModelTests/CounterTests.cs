@@ -11,9 +11,19 @@ namespace WordCounter.Tests
     {
       Counter newCounter = new Counter("", "");
 
-      string result = newCounter.EmptyInput();
+      bool result = newCounter.EmptyInput();
 
-      Assert.AreEqual(result, "RE-ENTER YOUR SELECTION");
+      Assert.AreEqual(result, true);
+    }
+
+    [TestMethod]
+    public void SplitSentence_IfMethodReturnsAnArray_StringArray()
+    {
+      Counter newCounter = new Counter("Mystery", "Its All A Mystery");
+
+      string[] result = newCounter.SplitSentence();
+      string[] wordTestArray = {"its", "all", "a", "mystery"};
+      CollectionAssert.AreEqual(result, wordTestArray);
     }
   }
 }
