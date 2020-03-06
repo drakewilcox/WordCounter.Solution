@@ -8,23 +8,34 @@ namespace WordCounter.Models
     public string InputWord { get; set; }
     public string InputSentence { get; set; }
     public int WordScore { get; set; }
+    
 
     public Counter (string inputWord, string inputSentence)
     {
-      InputWord = inputWord;
-      InputSentence = inputSentence; 
+      InputWord = inputWord.ToLower();
+      InputSentence = inputSentence.ToLower(); 
       WordScore = 0; 
+      
     }
-    public string EmptyInput ()
+    public bool EmptyInput ()
     {
       if (InputWord == "" || InputSentence == "")
       {
-        return "RE-ENTER YOUR SELECTION";
+        return true;
       }
       else 
       {
-        return "error";
+        return false;
       }
     }
+
+    public string[] SplitSentence()
+    {
+      string [] wordArray = InputSentence.Split(" ");
+      return wordArray;
+    }
+
+
+
   }
 }
