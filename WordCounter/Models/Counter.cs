@@ -1,7 +1,23 @@
 namespace ProjectName.Models
 {
-  public class ClassName
+  public class Counter
   {
-    // properties, constructors, methods, etc. go here
+    public string InputWord { get; set; }
+    public string InputSentence { get; set; }
+    public int WordScore { get; set; }
+
+    public Counter (string inputWord, string inputSentence)
+    {
+      InputWord = inputWord;
+      InputSentence = inputSentence; 
+      WordScore = 0; 
+    }
+    public string EmptyInput ()
+    {
+      if (InputWord == "" || InputSentence == "")
+      {
+        return "RE-ENTER YOUR SELECTION"
+      }
+    }
   }
 }
