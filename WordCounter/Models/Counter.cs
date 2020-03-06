@@ -1,5 +1,4 @@
 using System; 
-using System.Collections.Generic; 
 
 namespace WordCounter.Models
 {
@@ -9,7 +8,6 @@ namespace WordCounter.Models
     public string InputSentence { get; set; }
     public int WordScore { get; set; }
     
-
     public Counter (string inputWord, string inputSentence)
     {
       InputWord = inputWord.ToLower();
@@ -17,7 +15,7 @@ namespace WordCounter.Models
       WordScore = 0; 
     }
     
-    public bool EmptyInput ()
+    public bool EmptyInput()
     {
       if (InputWord == "" || InputSentence == "")
       {
@@ -31,7 +29,7 @@ namespace WordCounter.Models
 
     public string[] SplitSentence()
     {
-      char[] delimiterChars = {' ', ',', '.', ':', '\t' };
+      char[] delimiterChars = {' ', ',', '.', ':', '!','\t'};
       string [] wordArray = InputSentence.Split(delimiterChars);
       
       return wordArray;
@@ -47,12 +45,9 @@ namespace WordCounter.Models
         }
         else 
         {
-
+          
         }
       }
     }
-
-
-
   }
 }
