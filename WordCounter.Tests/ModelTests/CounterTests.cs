@@ -25,6 +25,7 @@ namespace WordCounter.Tests
       string[] wordTestArray = {"its", "all", "a", "mystery"};
       CollectionAssert.AreEqual(result, wordTestArray);
     }
+
     [TestMethod]
     public void CountWords_MethodAddsToWordScore_Int()
     {
@@ -48,6 +49,7 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(result, 3);
     }
+    
     [TestMethod]
     public void CountWords_MethodAccountsForLowerCaseWords_Int()
     {
