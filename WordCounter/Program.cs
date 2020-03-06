@@ -22,6 +22,13 @@ namespace WordCounter
       Console.WriteLine("ENTER THE WORD YOU WOULD LIKE TO SEARCH FOR");
       string userWordInput = Console.ReadLine();
       Counter newCounter = new Counter(userWordInput, userSentenceInput);
+      bool emptyInput = newCounter.EmptyInput();
+      if (emptyInput == true)
+      {
+      Console.WriteLine("Please Re-Enter Your Selection");
+      PartOne();
+      }
+      else {}
       string[] userInputArray = newCounter.SplitSentence();
       newCounter.CountWords(userInputArray);
       Console.WriteLine();
