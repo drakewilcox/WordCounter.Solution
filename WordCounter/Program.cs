@@ -50,6 +50,7 @@ namespace WordCounter
       else
       PartTwo();
     }
+    
     public static void Exit()
     {
       Console.WriteLine("");
