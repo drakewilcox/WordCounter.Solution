@@ -7,10 +7,13 @@ namespace WordCounter.Tests
   public class CounterTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void EmptyInput_IfUserInputAndSentenceAreEmpty_String()
     {
-    // any necessary logic to prep for test; instantiating new classes, etc.
-    Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Counter newCounter = new Counter("", "");
+
+      string result = newCounter.EmptyInput();
+
+      Assert.AreEqual(result, "RE-ENTER YOUR SELECTION");
     }
   }
 }

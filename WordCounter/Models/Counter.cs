@@ -1,4 +1,7 @@
-namespace ProjectName.Models
+using System; 
+using System.Collections.Generic; 
+
+namespace WordCounter.Models
 {
   public class Counter
   {
@@ -16,7 +19,11 @@ namespace ProjectName.Models
     {
       if (InputWord == "" || InputSentence == "")
       {
-        return "RE-ENTER YOUR SELECTION"
+        return "RE-ENTER YOUR SELECTION";
+      }
+      else 
+      {
+        return "error";
       }
     }
   }
