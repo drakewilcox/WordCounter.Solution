@@ -32,7 +32,23 @@ namespace WordCounter.Models
     public string[] SplitSentence()
     {
       string [] wordArray = InputSentence.Split(" ");
+      // CountWords(wordArray);
       return wordArray;
+    }
+
+    public void CountWords(string[] wordArray)
+    {
+      foreach (var word in wordArray)
+      {
+        if(word == InputWord)
+        {
+          WordScore += 1;
+        }
+        else 
+        {
+
+        }
+      }
     }
 
 
