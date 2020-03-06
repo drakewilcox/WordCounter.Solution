@@ -48,5 +48,15 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(result, 3);
     }
+    [TestMethod]
+    public void CountWords_MethodAccountsForLowerCaseWords_Int()
+    {
+      Counter newCounter = new Counter("mystery", "OH, IT'S ALL JUST A MYSTERY!"); 
+      string[] wordTestArray = newCounter.SplitSentence();
+      newCounter.CountWords(wordTestArray);
+      int result = newCounter.WordScore; 
+
+      Assert.AreEqual(result, 1);
+    }
   }
 }
