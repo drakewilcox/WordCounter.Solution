@@ -15,8 +15,8 @@ namespace WordCounter.Models
       InputWord = inputWord.ToLower();
       InputSentence = inputSentence.ToLower(); 
       WordScore = 0; 
-      
     }
+    
     public bool EmptyInput ()
     {
       if (InputWord == "" || InputSentence == "")
@@ -31,8 +31,9 @@ namespace WordCounter.Models
 
     public string[] SplitSentence()
     {
-      string [] wordArray = InputSentence.Split(" ");
-      // CountWords(wordArray);
+      char[] delimiterChars = {' ', ',', '.', ':', '\t' };
+      string [] wordArray = InputSentence.Split(delimiterChars);
+      
       return wordArray;
     }
 

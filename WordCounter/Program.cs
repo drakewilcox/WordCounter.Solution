@@ -2,13 +2,13 @@ using WordCounter.Models;
 using System.Collections.Generic;
 using System;
 
-namespace Counter
+namespace WordCounter
 {
   public class Program
   {
     public static void Main()
     {
-
+      
     }
   }
 }

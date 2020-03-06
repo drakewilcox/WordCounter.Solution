@@ -28,7 +28,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void CountWords_MethodAddsToWordScore_Int()
     {
-      Counter newCounter = new Counter("Mystery", "Its All A Mystery");
+      Counter newCounter = new Counter("Mystery", "It's All A Mystery");
 
       string[] wordTestArray = newCounter.SplitSentence();
       newCounter.CountWords(wordTestArray);
@@ -37,5 +37,16 @@ namespace WordCounter.Tests
       Assert.AreEqual(result, 1);
     }
 
+    [TestMethod]
+    public void CountWords_DoesNotIncludeWordsThatContainInputWord_Int()
+    {
+      Counter newCounter = new Counter("Bat", "Batman does not look like a bat, the bat looks like a bat.");
+
+      string[] wordTestArray = newCounter.SplitSentence();
+      newCounter.CountWords(wordTestArray);
+      int result = newCounter.WordScore;
+
+      Assert.AreEqual(result, 3);
+    }
   }
 }

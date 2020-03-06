@@ -11,8 +11,8 @@ _This is a Friday project for week 2 of the C# unit at Epicodus that implements 
 ## Specifications:
 
 | Specification | Example Input | Example Output |
-| :-------------:|:-------------:|:-------------:|
-| When the user inputs nothing, the appication returns with an error . | "" | "Please Enter a Word and a Sentence" |
+| :-------------|:-------------:|:-------------:|
+| When the user inputs nothing, the appication returns with an error . | " " | "Please Enter a Word and a Sentence" |
 | When the user inputs a word and a sentence, the appication returns with the amount of times that word occurs | Word: "Mystery" Sentence: "Its all a Mystery" | Word Count: 1 |
 | When the sentence contains words that include the input word, the word count does not increase | Word: "hood" Sentence: "The hooded soldier fought bravely." | Word Count: 0 |
 The Application account for lower and uppercase letters | Word: "CAT" Sentence: "Damn, that's a cute cat. | Word Count: 1 |
