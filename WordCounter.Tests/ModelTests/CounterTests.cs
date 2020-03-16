@@ -20,7 +20,7 @@ namespace WordCounter.Tests
 
       bool result = newCounter.EmptyInput();
 
-      Assert.AreEqual(result, true);
+      Assert.AreEqual(true, result);
     }
 
     [TestMethod]
@@ -30,7 +30,7 @@ namespace WordCounter.Tests
 
       string[] result = newCounter.SplitSentence();
       string[] wordTestArray = {"its", "all", "a", "mystery"};
-      CollectionAssert.AreEqual(result, wordTestArray);
+      CollectionAssert.AreEqual(wordTestArray, result);
     }
 
     [TestMethod]
@@ -42,7 +42,7 @@ namespace WordCounter.Tests
       newCounter.CountWords(wordTestArray);
       int result = newCounter.WordScore;
 
-      Assert.AreEqual(result, 1);
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
@@ -54,7 +54,7 @@ namespace WordCounter.Tests
       newCounter.CountWords(wordTestArray);
       int result = newCounter.WordScore;
 
-      Assert.AreEqual(result, 3);
+      Assert.AreEqual(3, result);
     }
     
     [TestMethod]
@@ -65,7 +65,7 @@ namespace WordCounter.Tests
       newCounter.CountWords(wordTestArray);
       int result = newCounter.WordScore; 
 
-      Assert.AreEqual(result, 1);
+      Assert.AreEqual(1, result);
     }
   }
 }
