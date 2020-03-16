@@ -23,7 +23,7 @@ namespace WordCounter
       string userWordInput = Console.ReadLine();
       Counter newCounter = new Counter(userWordInput, userSentenceInput);
       bool emptyInput = newCounter.EmptyInput();
-      if (emptyInput == true)
+      if (emptyInput)
       {
       Console.WriteLine("Please Re-Enter Your Selection");
       PartOne();
