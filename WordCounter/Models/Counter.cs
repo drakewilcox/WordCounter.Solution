@@ -42,10 +42,6 @@ namespace WordCounter.Models
         {
           WordScore += 1;
         }
-        else 
-        {
-          
-        }
       }
     }
   }
