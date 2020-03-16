@@ -12,7 +12,6 @@ namespace WordCounter.Models
     {
       InputWord = inputWord.ToLower();
       InputSentence = inputSentence.ToLower(); 
-      WordScore = 0; 
     }
     
     public bool EmptyInput()
