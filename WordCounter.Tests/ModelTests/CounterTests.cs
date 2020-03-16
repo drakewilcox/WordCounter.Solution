@@ -7,6 +7,13 @@ namespace WordCounter.Tests
   public class CounterTests
   {
     [TestMethod]
+    public void CounterConstructor_CreateInstanceOfCounter_Counter()
+    {
+      Counter newCounter = new Counter("Mystery", "Its All A Mystery");
+
+      Assert.AreEqual(typeof(Counter), newCounter.GetType());
+    }
+    [TestMethod]
     public void EmptyInput_IfUserInputAndSentenceAreEmpty_String()
     {
       Counter newCounter = new Counter("", "");
